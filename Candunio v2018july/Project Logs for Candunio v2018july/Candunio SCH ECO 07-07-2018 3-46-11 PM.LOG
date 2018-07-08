@@ -1,0 +1,22 @@
+Remove Pin=R2-2 From Net=RXD
+Remove Pin=R3-2 From Net=TXD
+Remove Pin=R5-1 From Net=+12V
+Remove Pin=U3-2 From Net=+12V
+Remove Pin=U3-3 From Net=+5V
+Remove Pin=U5-12 From Net=INT CAN
+Remove Pin=U5-13 From Net=D13/SCK
+Remove Pin=U5-14 From Net=D12/MISO
+Remove Pin=U5-15 From Net=D12/MISO
+Remove Pin=U5-16 From Net=MCP_CS
+Change Component Footprint: Designator=F1 Old Footprint=1812 New Footprint=PIN-W2/E2.8
+Change Component Footprint: Designator=C1 Old Footprint=C1206 New Footprint=C0805
+Change Component Footprint: Designator=C5 Old Footprint=C1206 New Footprint=C0805
+Change Component Footprint: Designator=C9 Old Footprint=C1206 New Footprint=C0805
+Change Component Footprint: Designator=C3 Old Footprint=C1206 New Footprint=C2512
+Change Component Footprint: Designator=C4 Old Footprint=C1206 New Footprint=C2512
+Change Component Footprint: Designator=C6 Old Footprint=C1206 New Footprint=C2512
+Change Component Footprint: Designator=C7 Old Footprint=C1206 New Footprint=C2512
+Change Component Footprint: Designator=C8 Old Footprint=C1206 New Footprint=C2512
+Change Component Footprint: Designator=C10 Old Footprint=C1206 New Footprint=C2512
+Change Component Designator: OldDesignator=C9 NewDesignator=C1
+Change Component Designator: OldDesignator=C10 NewDesignator=C2

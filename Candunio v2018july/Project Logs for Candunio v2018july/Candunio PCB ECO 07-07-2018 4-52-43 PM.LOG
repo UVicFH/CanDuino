@@ -1,0 +1,37 @@
+Added Component: Designator=SW1(PTS525SM15SMTR2)
+Added Component: Designator=U3(SOIC127P600X175-8M)
+Added Component: Designator=U5(SOIC127P1030X265-18M)
+Added Component: Designator=Y1(CSTCE16M0V53-R0)
+Added Component: Designator=Y2(CSTCE16M0V53-R0)
+Added Pin To Net: NetName=RESET Pin=SW1-1
+Added Pin To Net: NetName=GND Pin=SW1-4
+Added Pin To Net: NetName=NetU3_1 Pin=U3-1
+Added Pin To Net: NetName=GND Pin=U3-2
+Added Pin To Net: NetName=+5V Pin=U3-3
+Added Pin To Net: NetName=NetU3_4 Pin=U3-4
+Added Pin To Net: NetName=CANL Pin=U3-6
+Added Pin To Net: NetName=CANH Pin=U3-7
+Added Pin To Net: NetName=NetR5_2 Pin=U3-8
+Added Pin To Net: NetName=NetU3_1 Pin=U5-1
+Added Pin To Net: NetName=NetU3_4 Pin=U5-2
+Added Pin To Net: NetName=NetU5_7 Pin=U5-7
+Added Pin To Net: NetName=NetU5_8 Pin=U5-8
+Added Pin To Net: NetName=GND Pin=U5-9
+Added Pin To Net: NetName=D2/INTCAN Pin=U5-12
+Added Pin To Net: NetName=D13/SCK Pin=U5-13
+Added Pin To Net: NetName=D11/MOSI Pin=U5-14
+Added Pin To Net: NetName=D12/MISO Pin=U5-15
+Added Pin To Net: NetName=D9/CS Pin=U5-16
+Added Pin To Net: NetName=NetR7_1 Pin=U5-17
+Added Pin To Net: NetName=+5V Pin=U5-18
+Added Pin To Net: NetName=NetU1_7 Pin=Y1-1
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Pin To Net: NetName=NetU1_8 Pin=Y1-3
+Added Pin To Net: NetName=NetU5_8 Pin=Y2-1
+Added Pin To Net: NetName=GND Pin=Y2-2
+Added Pin To Net: NetName=NetU5_7 Pin=Y2-3
+Added Member To Class: ClassName=Candunio Member=Component SW1 PTS525SM15SMTR2
+Added Member To Class: ClassName=Candunio Member=Component U3 MCP2551-E/SN
+Added Member To Class: ClassName=Candunio Member=Component U5 MCP2515-E/ST
+Added Member To Class: ClassName=Candunio Member=Component Y1 CSTCE16M0V53-R0
+Added Member To Class: ClassName=Candunio Member=Component Y2 CSTCE16M0V53-R0
