@@ -1,0 +1,495 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\uvichybrid\Documents\Altium\AD18\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">7/15/2018</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">7:57:20 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc" class="file"><acronym title="C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc">C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">53</td></tr>
+</table>
+</td>
+</table><a name="IDATVUE1BXBKZREMXAVLCJZ0IG0PEGZILDTJXHEOP03OTSF0YQ4EAL"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOC4XPLTSOO0DOI3WOMIWXRLHEEKASZ4TCB1P02SOODWPIJKQFOL">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDBNROP0CMSNED4CLCUDQOA42TNNS0KBKUOI0H3OZH5NCLSPUXO1L">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1MQNRUP2MLBYEF2H5NOW0BBHYGVQEAMJJVWPALJWMGSAQRPI555O">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0KVHENPNGC0IESV1H4BTN3SWGB4WDWYFA0M1G1C4MOU34J3IVFQI">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMZ2D4DQOCXF5P4WJ1B4F5CCSVGZEJMYMBHL15VK2UHSXEHAYTIUI">Width Constraint (Min=0.35mm) (Max=1mm) (Preferred=0.55mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2FXXVM0FOBAALBLGGHKXBUR31N3KHJM4JB1ZSQMXU1Z0PILBVBTL">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKRHWOA0SLASDCR2DW1GDYHQCPGREESK1WTD22HOWEFF2DDW1AEFM">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0TG2JVO30N3RHWNILJY5RWXSFHEOFCUTANW44VBPX2H0OXEPILPD">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJGXC55I1VX3JF2LUNAZ5WSRK4GLR0ENPDIAL1LDWIYZFNYSGZLUH">Minimum Solder Mask Sliver (Gap=0.07mm) (All),(All)</a></td>
+<td class="column2">41</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDO2P4HMHFKVLKKF42ULCOYSOJFE4FD2JA45UWQ3P5IKUEK5OA13NN">Silk To Solder Mask (Clearance=0.07mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWUFC0HCRC2L5FJW0ID5EMXV4LDZFPSNEKVS0WEF0I5Z1V1ET1XN">Silk to Silk (Clearance=0.07mm) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVAD2FTYYJNE1GQTQTJ5IL3VIGE2KHHX3HBDNDYLK3TRXUKVJOCDI">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPW2IYTSABBJ3NAJOIU5GD2WWJAMMELK2XS5NDLREM5K2DY553EH">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">53</td>
+</tr>
+</table><br><a name="IDJGXC55I1VX3JF2LUNAZ5WSRK4GLR0ENPDIAL1LDWIYZFNYSGZLUH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.07mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5876.553mil|Location2.X=5880.559mil|Location1.Y=2978.539mil|Location2.Y=2982.545mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5876.553mil|Location2.X=5880.559mil|Location1.Y=2978.539mil|Location2.Y=2982.545mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.033mm &lt; 0.07mm) Between Pad C5-1(149.983mm,74.752mm) on Bottom Layer And Via (148.95mm,75.75mm) from Top Layer to Bottom Layer [Bottom Solder] Mask Sliver [0.033mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6307.974mil|Location2.X=6311.98mil|Location1.Y=2603.312mil|Location2.Y=2607.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6307.974mil|Location2.X=6311.98mil|Location1.Y=2603.312mil|Location2.Y=2607.318mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad J1-1(161.05mm,65.85mm) on Top Layer And Pad J1-2(161.05mm,66.5mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6307.974mil|Location2.X=6311.98mil|Location1.Y=2628.902mil|Location2.Y=2632.908mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6307.974mil|Location2.X=6311.98mil|Location1.Y=2628.902mil|Location2.Y=2632.908mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad J1-2(161.05mm,66.5mm) on Top Layer And Pad J1-3(161.05mm,67.15mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6370.045mil|Location2.X=6374.051mil|Location1.Y=2618.374mil|Location2.Y=2622.38mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6370.045mil|Location2.X=6374.051mil|Location1.Y=2618.374mil|Location2.Y=2622.38mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad J1-2(161.05mm,66.5mm) on Top Layer And Via (162.225mm,66.558mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6307.974mil|Location2.X=6311.98mil|Location1.Y=2654.493mil|Location2.Y=2658.499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6307.974mil|Location2.X=6311.98mil|Location1.Y=2654.493mil|Location2.Y=2658.499mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad J1-3(161.05mm,67.15mm) on Top Layer And Pad J1-4(161.05mm,67.8mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6307.974mil|Location2.X=6311.98mil|Location1.Y=2680.084mil|Location2.Y=2684.09mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6307.974mil|Location2.X=6311.98mil|Location1.Y=2680.084mil|Location2.Y=2684.09mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad J1-4(161.05mm,67.8mm) on Top Layer And Pad J1-5(161.05mm,68.45mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2397.091mil|Location2.Y=2401.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2397.091mil|Location2.Y=2401.097mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-1(137.369mm,61.337mm) on Top Layer And Pad U1-2(137.369mm,60.537mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5508.589mil|Location2.X=5512.595mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5508.589mil|Location2.X=5512.595mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-10(139.569mm,54.337mm) on Top Layer And Pad U1-11(140.369mm,54.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5477.092mil|Location2.X=5481.097mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5477.092mil|Location2.X=5481.097mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-10(139.569mm,54.337mm) on Top Layer And Pad U1-9(138.769mm,54.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.085mil|Location2.X=5544.091mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.085mil|Location2.X=5544.091mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-11(140.369mm,54.337mm) on Top Layer And Pad U1-12(141.169mm,54.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5571.581mil|Location2.X=5575.587mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5571.581mil|Location2.X=5575.587mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-12(141.169mm,54.337mm) on Top Layer And Pad U1-13(141.969mm,54.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5603.077mil|Location2.X=5607.083mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5603.077mil|Location2.X=5607.083mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-13(141.969mm,54.337mm) on Top Layer And Pad U1-14(142.769mm,54.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5634.573mil|Location2.X=5638.578mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5634.573mil|Location2.X=5638.578mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-14(142.769mm,54.337mm) on Top Layer And Pad U1-15(143.569mm,54.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5666.069mil|Location2.X=5670.074mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5666.069mil|Location2.X=5670.074mil|Location1.Y=2115.596mil|Location2.Y=2119.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-15(143.569mm,54.337mm) on Top Layer And Pad U1-16(144.369mm,54.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5665.694mil|Location2.X=5669.7mil|Location1.Y=2157.446mil|Location2.Y=2161.452mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5665.694mil|Location2.X=5669.7mil|Location1.Y=2157.446mil|Location2.Y=2161.452mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.066mm &lt; 0.07mm) Between Pad U1-16(144.369mm,54.337mm) on Top Layer And Via (143.575mm,54.85mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.066mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2208.115mil|Location2.Y=2212.121mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2208.115mil|Location2.Y=2212.121mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-17(145.769mm,55.737mm) on Top Layer And Pad U1-18(145.769mm,56.537mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2239.611mil|Location2.Y=2243.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2239.611mil|Location2.Y=2243.617mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-18(145.769mm,56.537mm) on Top Layer And Pad U1-19(145.769mm,57.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2271.107mil|Location2.Y=2275.113mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2271.107mil|Location2.Y=2275.113mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-19(145.769mm,57.337mm) on Top Layer And Pad U1-20(145.769mm,58.137mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.517mil|Location2.X=5719.523mil|Location1.Y=2271.363mil|Location2.Y=2275.369mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.517mil|Location2.X=5719.523mil|Location1.Y=2271.363mil|Location2.Y=2275.369mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.06mm &lt; 0.07mm) Between Pad U1-19(145.769mm,57.337mm) on Top Layer And Via (145.225mm,58.125mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.06mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2365.595mil|Location2.Y=2369.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2365.595mil|Location2.Y=2369.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-2(137.369mm,60.537mm) on Top Layer And Pad U1-3(137.369mm,59.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5385.997mil|Location2.X=5390.003mil|Location1.Y=2365.178mil|Location2.Y=2369.184mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5385.997mil|Location2.X=5390.003mil|Location1.Y=2365.178mil|Location2.Y=2369.184mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.068mm &lt; 0.07mm) Between Pad U1-2(137.369mm,60.537mm) on Top Layer And Via (136.855mm,59.741mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.068mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2302.603mil|Location2.Y=2306.609mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2302.603mil|Location2.Y=2306.609mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-20(145.769mm,58.137mm) on Top Layer And Pad U1-21(145.769mm,58.937mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2334.099mil|Location2.Y=2338.105mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2334.099mil|Location2.Y=2338.105mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-21(145.769mm,58.937mm) on Top Layer And Pad U1-22(145.769mm,59.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2365.595mil|Location2.Y=2369.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2365.595mil|Location2.Y=2369.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-22(145.769mm,59.737mm) on Top Layer And Pad U1-23(145.769mm,60.537mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5725.775mil|Location2.X=5729.781mil|Location1.Y=2334.02mil|Location2.Y=2338.026mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5725.775mil|Location2.X=5729.781mil|Location1.Y=2334.02mil|Location2.Y=2338.026mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.051mm &lt; 0.07mm) Between Pad U1-22(145.769mm,59.737mm) on Top Layer And Via (145.486mm,58.958mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.051mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2397.091mil|Location2.Y=2401.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.281mil|Location2.X=5719.287mil|Location1.Y=2397.091mil|Location2.Y=2401.097mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-23(145.769mm,60.537mm) on Top Layer And Pad U1-24(145.769mm,61.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5666.069mil|Location2.X=5670.074mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5666.069mil|Location2.X=5670.074mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-25(144.369mm,62.737mm) on Top Layer And Pad U1-26(143.569mm,62.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5634.573mil|Location2.X=5638.578mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5634.573mil|Location2.X=5638.578mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-26(143.569mm,62.737mm) on Top Layer And Pad U1-27(142.769mm,62.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5603.077mil|Location2.X=5607.083mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5603.077mil|Location2.X=5607.083mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-27(142.769mm,62.737mm) on Top Layer And Pad U1-28(141.969mm,62.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5571.581mil|Location2.X=5575.587mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5571.581mil|Location2.X=5575.587mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-28(141.969mm,62.737mm) on Top Layer And Pad U1-29(141.169mm,62.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.085mil|Location2.X=5544.091mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.085mil|Location2.X=5544.091mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-29(141.169mm,62.737mm) on Top Layer And Pad U1-30(140.369mm,62.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2334.099mil|Location2.Y=2338.105mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2334.099mil|Location2.Y=2338.105mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-3(137.369mm,59.737mm) on Top Layer And Pad U1-4(137.369mm,58.937mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5508.589mil|Location2.X=5512.595mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5508.589mil|Location2.X=5512.595mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-30(140.369mm,62.737mm) on Top Layer And Pad U1-31(139.569mm,62.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.202mil|Location2.X=5544.208mil|Location1.Y=2447.8mil|Location2.Y=2451.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.202mil|Location2.X=5544.208mil|Location1.Y=2447.8mil|Location2.Y=2451.806mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.053mm &lt; 0.07mm) Between Pad U1-30(140.369mm,62.737mm) on Top Layer And Via (141.15mm,62.225mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.053mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5477.092mil|Location2.X=5481.097mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5477.092mil|Location2.X=5481.097mil|Location1.Y=2446.304mil|Location2.Y=2450.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-31(139.569mm,62.737mm) on Top Layer And Pad U1-32(138.769mm,62.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2302.603mil|Location2.Y=2306.609mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2302.603mil|Location2.Y=2306.609mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-4(137.369mm,58.937mm) on Top Layer And Pad U1-5(137.369mm,58.137mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5426.997mil|Location2.X=5431.003mil|Location1.Y=2302.182mil|Location2.Y=2306.188mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5426.997mil|Location2.X=5431.003mil|Location1.Y=2302.182mil|Location2.Y=2306.188mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.068mm &lt; 0.07mm) Between Pad U1-4(137.369mm,58.937mm) on Top Layer And Via (137.897mm,58.141mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.068mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2271.107mil|Location2.Y=2275.113mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2271.107mil|Location2.Y=2275.113mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-5(137.369mm,58.137mm) on Top Layer And Pad U1-6(137.369mm,57.337mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2239.611mil|Location2.Y=2243.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2239.611mil|Location2.Y=2243.617mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-6(137.369mm,57.337mm) on Top Layer And Pad U1-7(137.369mm,56.537mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2208.115mil|Location2.Y=2212.121mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5384.571mil|Location2.X=5388.577mil|Location1.Y=2208.115mil|Location2.Y=2212.121mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U1-7(137.369mm,56.537mm) on Top Layer And Pad U1-8(137.369mm,55.737mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5805.084mil|Location2.X=5809.09mil|Location1.Y=3353.312mil|Location2.Y=3357.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5805.084mil|Location2.X=5809.09mil|Location1.Y=3353.312mil|Location2.Y=3357.318mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.07mm) Between Pad U2-2(148.05mm,83.9mm) on Top Layer And Via (147.5mm,85.6mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDWUFC0HCRC2L5FJW0ID5EMXV4LDZFPSNEKVS0WEF0I5Z1V1ET1XN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.07mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5396.977mil|Location2.X=5405.586mil|Location1.Y=3366.737mil|Location2.Y=3372.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5396.977mil|Location2.X=5405.586mil|Location1.Y=3366.737mil|Location2.Y=3372.787mil|Absolute=True">Silk To Silk Clearance Constraint: (0.069mm &lt; 0.07mm) Between Text "CANH" (136.887mm,85.65mm) on Top Overlay And Text "U3" (136.312mm,84.88mm) on Top Overlay Silk Text to Silk Clearance [0.069mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVAD2FTYYJNE1GQTQTJ5IL3VIGE2KHHX3HBDNDYLK3TRXUKVJOCDI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4796.634mil|Location2.X=4882.325mil|Location1.Y=2397.433mil|Location2.Y=2536.036mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4796.634mil|Location2.X=4882.325mil|Location1.Y=2397.433mil|Location2.Y=2536.036mil|Absolute=True">Net Antennae: Via (122.775mm,61.835mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4870.961mil|Location2.X=4956.652mil|Location1.Y=2214.941mil|Location2.Y=2353.544mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4870.961mil|Location2.X=4956.652mil|Location1.Y=2214.941mil|Location2.Y=2353.544mil|Absolute=True">Net Antennae: Via (124.663mm,57.2mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4933.445mil|Location2.X=5019.136mil|Location1.Y=2134.232mil|Location2.Y=2272.836mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4933.445mil|Location2.X=5019.136mil|Location1.Y=2134.232mil|Location2.Y=2272.836mil|Absolute=True">Net Antennae: Via (126.25mm,55.15mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4997.421mil|Location2.X=5083.113mil|Location1.Y=2052.539mil|Location2.Y=2191.143mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4997.421mil|Location2.X=5083.113mil|Location1.Y=2052.539mil|Location2.Y=2191.143mil|Absolute=True">Net Antennae: Via (127.875mm,53.075mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5072.225mil|Location2.X=5157.916mil|Location1.Y=1981.435mil|Location2.Y=2120.039mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5072.225mil|Location2.X=5157.916mil|Location1.Y=1981.435mil|Location2.Y=2120.039mil|Absolute=True">Net Antennae: Via (129.775mm,51.269mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5225.768mil|Location2.X=5311.459mil|Location1.Y=1866.986mil|Location2.Y=2005.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5225.768mil|Location2.X=5311.459mil|Location1.Y=1866.986mil|Location2.Y=2005.59mil|Absolute=True">Net Antennae: Via (133.675mm,48.362mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5410.309mil|Location2.X=5496mil|Location1.Y=3406.87mil|Location2.Y=3545.474mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5410.309mil|Location2.X=5496mil|Location1.Y=3406.87mil|Location2.Y=3545.474mil|Absolute=True">Net Antennae: Via (138.362mm,87.475mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5508.734mil|Location2.X=5594.425mil|Location1.Y=3406.87mil|Location2.Y=3545.474mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5508.734mil|Location2.X=5594.425mil|Location1.Y=3406.87mil|Location2.Y=3545.474mil|Absolute=True">Net Antennae: Via (140.862mm,87.475mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5774.314mil|Location2.X=5860.005mil|Location1.Y=1804.508mil|Location2.Y=1943.111mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5774.314mil|Location2.X=5860.005mil|Location1.Y=1804.508mil|Location2.Y=1943.111mil|Absolute=True">Net Antennae: Via (147.608mm,46.775mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5879.311mil|Location2.X=5965.003mil|Location1.Y=1841.909mil|Location2.Y=1980.513mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5879.311mil|Location2.X=5965.003mil|Location1.Y=1841.909mil|Location2.Y=1980.513mil|Absolute=True">Net Antennae: Via (150.275mm,47.725mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6068.288mil|Location2.X=6153.979mil|Location1.Y=1949.193mil|Location2.Y=2087.796mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\uvichybrid\Documents\GitHub\CanDuino\Candunio v2018_7_14\Candunio.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6068.288mil|Location2.X=6153.979mil|Location1.Y=1949.193mil|Location2.Y=2087.796mil|Absolute=True">Net Antennae: Via (155.075mm,50.45mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
