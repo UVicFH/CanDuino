@@ -21,17 +21,28 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
   d) disconeect all boards from the computer
   
   e) conect wires as follows (Orginal Arduino -> New Canduino):
+  
       5V -> 5V
+      
       GND -> GND
+      
       SCK -> SCK
+      
       MISO -> MISO
+      
       MOSI -> MOSI
+      
       Pin10 -> RESET  
       
+      
   f) make sure the settings in the IDE are:
+  
       Board: Arduino/Genuino UNO
+      
       Port: The one it connects to
+      
       Programmer: "Arduino as ISP"
+      
       
   g) connect the Working Arduino (that is not coneected to the new Canduino) to the computer
   
@@ -46,6 +57,7 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
   b) open you sketch
   
   c) change the board to "Arduino Pro or Pro Mini"
+  
       Select "ATmega 329P (5V, 16 MHZ)" as the Processor
       
   d) upload
