@@ -1,6 +1,0 @@
-Change component parameters: Designator = "J1"; Footprint = "1050170001"; UniqueID = "\FSABFIUF"
-Change component parameters. Clean all parameters for all variants
-Change component parameters (AddParameter): Name = "Details"; Value = "Modified from reference footprint for standard drill hits (rather than slots)"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "Part number"; Value = "WM1399CT-ND"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "Supplier Part Number"; Value = "609-4618-1-ND"; VariantName = "[No Variations]"

@@ -1,0 +1,28 @@
+Importer Log Report
+Project : NanoV3.2.PrjPcb
+
+Section : Analyze Document - C:\Users\akshd\Desktop\UVIC Hybrid team\Canduino\Candunio v2018_11_03\NanoV3.2.brd
+    Analyzing data of C:\Users\akshd\Desktop\UVIC Hybrid team\Canduino\Candunio v2018_11_03\NanoV3.2.brd
+    Load settings
+    Load layers 161
+    Load Library "IntegratedCircuits"
+    Load Packages 3
+    Load Library "Opto"
+    Load Packages 1
+    Load Library "Resistenze"
+    Load Packages 1
+    Load Library "Connettori"
+    Load Packages 3
+    Load Library "Condensatori"
+    Load Packages 2
+    Load Library "Cristalli"
+    Load Packages 1
+    Load Library "Switches"
+    Load Packages 1
+    Load Library "Diodi"
+    Load Packages 1
+    Load Library "Arduino-utility"
+    Load Packages 3
+    Load Library "Arduino-rcl"
+    Load Packages 1
+EndSection
