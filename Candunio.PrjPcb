@@ -93,6 +93,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Candunio\Design Rule Check - Candunio.html
+DItemRevisionGUID=
+
 [SearchPath1]
 Path=..\ALL ALTIUM DEFAULT LIBRARIES\*.*
 IncludeSubFolders=1
