@@ -18,7 +18,7 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
   
   c) upload the ArduinoISP sketch to your now working arduino
   
-  d) disconeect all boards from the computer
+  d) disconnect all boards from the computer
   
   e) conect wires as follows (Orginal Arduino -> New Canduino):
   
@@ -26,11 +26,11 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
       
       GND -> GND
       
-      SCK -> SCK
+      SCK (Pin 13) -> SCK
       
-      MISO -> MISO
+      MISO (Pin 11) -> MISO
       
-      MOSI -> MOSI
+      MOSI (Pin 12) -> MOSI
       
       Pin10 -> RESET  
       
@@ -46,7 +46,7 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
       
   g) connect the Working Arduino (that is not coneected to the new Canduino) to the computer
   
-  h) click burn bootloader
+  h) click burn bootloader (may need to change heartbeat to 20 from 40)
   
   i) when done disconnect the USB and all wires between the boards
   
@@ -54,13 +54,15 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
 
   a) conect the new bootloaded Canduino to the computer via USB
   
-  b) open you sketch
+  b) open your sketch
   
   c) change the board to "Arduino Pro or Pro Mini"
   
-      Select "ATmega 329P (5V, 16 MHZ)" as the Processor
+      Select "ATmega 328P (5V, 16 MHZ)" as the Processor
       
-  d) upload
+  d) upload CAN test code - example sketch CAN receive_check and/ or CAN send_check to ensure CAN functionality
   
+  e) upload your sketch
+   
   e) enjoy
-  
+ 
