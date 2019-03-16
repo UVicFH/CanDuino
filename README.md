@@ -28,9 +28,9 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
       
       SCK (Pin 13) -> SCK
       
-      MISO (Pin 11) -> MISO
+      MISO (Pin 12) -> MISO
       
-      MOSI (Pin 12) -> MOSI
+      MOSI (Pin 11) -> MOSI
       
       Pin10 -> RESET  
       
