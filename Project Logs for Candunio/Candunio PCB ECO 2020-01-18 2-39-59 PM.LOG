@@ -1,0 +1,130 @@
+Change component parameters: Designator = "F1"; Footprint = "FUSC4632X85N"; UniqueID = "\VRUAJDLC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Approvals"; Value = "UL,CSA,TUV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "1812"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Code (Imperial)"; Value = "1812"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Code (Metric)"; Value = "4532"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.ciiva.com/326/mfmsmf-326354.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.ciiva.com/326/mfmsmf-326354.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "https://datasheet.ciiva.com/1228/1786007-1228155.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "https://datasheet.ciiva.com/1228/1786007-1228155.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "https://datasheet.ciiva.com/16205/mfmsmf-16205994.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "https://datasheet.ciiva.com/16205/mfmsmf-16205994.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4Description"; Value = "https://datasheet.ciiva.com/34302/1164200-34302041.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4URL"; Value = "https://datasheet.ciiva.com/34302/1164200-34302041.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink5Description"; Value = "https://datasheet.ciiva.com/14537/70153434-14537737.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink5URL"; Value = "https://datasheet.ciiva.com/14537/70153434-14537737.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink6Description"; Value = "https://datasheet.ciiva.com/46395/1695373-46395287.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink6URL"; Value = "https://datasheet.ciiva.com/46395/1695373-46395287.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink7Description"; Value = "https://datasheet.ciiva.com/22749/1695373-22749079.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink7URL"; Value = "https://datasheet.ciiva.com/22749/1695373-22749079.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink8Description"; Value = "https://datasheet.ciiva.com/32426/mf-msmf-series-eng-tds-32426126.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink8URL"; Value = "https://datasheet.ciiva.com/32426/mf-msmf-series-eng-tds-32426126.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink9Description"; Value = "https://datasheet.ciiva.com/4501/mfmsmf-72300-4501655.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink9URL"; Value = "https://datasheet.ciiva.com/4501/mfmsmf-72300-4501655.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink10Description"; Value = "https://datasheet.ciiva.com/3019/mfmsmf-3019622.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink10URL"; Value = "https://datasheet.ciiva.com/3019/mfmsmf-3019622.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink11Description"; Value = "https://datasheet.ciiva.com/3019/mfmsmf-3019621.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink11URL"; Value = "https://datasheet.ciiva.com/3019/mfmsmf-3019621.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink12Description"; Value = "https://datasheet.ciiva.com/326/mfmsmf-326356.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink12URL"; Value = "https://datasheet.ciiva.com/326/mfmsmf-326356.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink13Description"; Value = "https://datasheet.ciiva.com/1274/1786007-1274499.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink13URL"; Value = "https://datasheet.ciiva.com/1274/1786007-1274499.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink14Description"; Value = "https://datasheet.ciiva.com/326/mfmsmf-326355.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink14URL"; Value = "https://datasheet.ciiva.com/326/mfmsmf-326355.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink15Description"; Value = "https://datasheet.ciiva.com/1274/1786007-1274498.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink15URL"; Value = "https://datasheet.ciiva.com/1274/1786007-1274498.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink16Description"; Value = "https://datasheet.ciiva.com/15226/getdatasheetpartid-117168-15226886.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink16URL"; Value = "https://datasheet.ciiva.com/15226/getdatasheetpartid-117168-15226886.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink17Description"; Value = "https://datasheet.ciiva.com/25894/mfmsmf-25894175.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink17URL"; Value = "https://datasheet.ciiva.com/25894/mfmsmf-25894175.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current Rating"; Value = "100A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.85mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Hold Current"; Value = "500mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "4.73mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Bourns"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "MF-MSMF050-2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Current Rating"; Value = "100A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount,PCB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Terminals"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Supply Voltage"; Value = "15V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "Thru-Hole; 2 Leads"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "2000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "PIN-W2/E2.8"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "part number"; Value = "MF-MSMF050-2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power Dissipation"; Value = "800mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "2000=0.2898, 4000=0.28463, 6000=0.27945, 10000=0.2691 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Resistance"; Value = "150mR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "126000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number"; Value = "?MF-MSMF050-2CT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Terminal Material"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Time to Trip"; Value = "0.15s"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Trip Current"; Value = "1A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "15V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating (DC)"; Value = "15V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Width"; Value = "3.41mm"; VariantName = "[No Variations]"
+Added Component: Designator=J2(HDRV15W95P0X254_1X15_3810X254X854P)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://docs-emea.rs-online.com/webdocs/1346/0900766b81346518.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "61301511121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "710-61301511121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=710-61301511121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RS Part Number"; Value = "8281623P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RS Price/Stock"; Value = "http://uk.rs-online.com/web/p/products/8281623P"; VariantName = "[No Variations]"
+Added Component: Designator=J3(HDRV15W95P0X254_1X15_3810X254X854P)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://docs-emea.rs-online.com/webdocs/1346/0900766b81346518.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "61301511121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "710-61301511121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=710-61301511121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RS Part Number"; Value = "8281623P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RS Price/Stock"; Value = "http://uk.rs-online.com/web/p/products/8281623P"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J2-2
+Added Pin To Net: NetName=RESET Pin=J2-3
+Added Pin To Net: NetName=+5V Pin=J2-4
+Added Pin To Net: NetName=ADC7 Pin=J2-5
+Added Pin To Net: NetName=ADC6 Pin=J2-6
+Added Pin To Net: NetName=ADC5 Pin=J2-7
+Added Pin To Net: NetName=ADC4 Pin=J2-8
+Added Pin To Net: NetName=ADC3 Pin=J2-9
+Added Pin To Net: NetName=ADC2 Pin=J2-10
+Added Pin To Net: NetName=ADC1 Pin=J2-11
+Added Pin To Net: NetName=ADC0 Pin=J2-12
+Added Pin To Net: NetName=+3.3V Pin=J2-14
+Added Pin To Net: NetName=D13/SCK Pin=J2-15
+Added Pin To Net: NetName=D1/TXD Pin=J3-1
+Added Pin To Net: NetName=D0/RXD Pin=J3-2
+Added Pin To Net: NetName=GND Pin=J3-4
+Added Pin To Net: NetName=D2/INTCAN Pin=J3-5
+Added Pin To Net: NetName=D3 Pin=J3-6
+Added Pin To Net: NetName=D4 Pin=J3-7
+Added Pin To Net: NetName=D5 Pin=J3-8
+Added Pin To Net: NetName=D6 Pin=J3-9
+Added Pin To Net: NetName=D7 Pin=J3-10
+Added Pin To Net: NetName=D8 Pin=J3-11
+Added Pin To Net: NetName=D9/CS Pin=J3-12
+Added Pin To Net: NetName=D10 Pin=J3-13
+Added Pin To Net: NetName=D11/MOSI Pin=J3-14
+Added Pin To Net: NetName=D12/MISO Pin=J3-15
+Added Pin To Net: NetName=+12V_car Pin=J2-1
+Added Net: Name=+12V_car
+Added Member To Class: ClassName=Candunio Member=Component J2 61301511121
+Added Member To Class: ClassName=Candunio Member=Component J3 61301511121
+Added Room: Name=Candunio
