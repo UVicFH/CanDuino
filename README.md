@@ -44,7 +44,7 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
       Programmer: "Arduino as ISP"
       
       
-  g) connect the Working Arduino (that is not coneected to the new Canduino) to the computer
+  g) connect the Working Arduino (that is now coneected to the new Canduino) to the computer
   
   h) click burn bootloader (may need to change heartbeat to 20 from 40)
   
@@ -58,7 +58,7 @@ Follow these fully and nothing else. If it still doesn't work, THEN go use the i
   
   c) change the board to "Arduino Pro or Pro Mini"
   
-      Select "ATmega 328P (5V, 16 MHZ)" as the Processor
+      Select "ATmega 328P (5V, 16 MHZ)" as the Processor, but uno seems to also work now???
       
   d) upload CAN test code - example sketch CAN receive_check and/ or CAN send_check to ensure CAN functionality
   
