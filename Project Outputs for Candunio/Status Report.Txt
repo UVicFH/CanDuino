@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Candunio.PrjPcb]
+   Generated File[Candunio.TXT]
+   Generated File[Candunio-BoardEdgeRout.TXT]
+   Generated File[Candunio.LDP]
+   Generated File[Candunio.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 11:35:58 AM On 2020-09-01
