@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\maanj\Documents\GitHub\CanDuino\Candunio.PcbDoc
-Date     : 2020-07-27
-Time     : 2:58:26 PM
+PCB File : C:\Users\leahc\Documents\GitHub\CanDuino\Candunio.PcbDoc
+Date     : 2020-09-03
+Time     : 5:38:54 PM
 
 Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
 Rule Violations :0
@@ -37,9 +37,11 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.25mm) (All),(All)
 Rule Violations :6
 
 Processing Rule : Silk To Solder Mask (Clearance=0.07mm) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.07mm) Between Pad C11-2(4.92mm,23mm) on Bottom Layer And Text "F1" (5.893mm,22.758mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.065mm < 0.07mm) Between Pad C8-1(22.72mm,17.5mm) on Top Layer And Track (23.4mm,16.75mm)(23.4mm,21.35mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.065mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.065mm < 0.07mm) Between Pad C8-1(22.72mm,17.5mm) on Top Layer And Track (23.4mm,16.75mm)(33.6mm,16.75mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.065mm]
-Rule Violations :2
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.07mm) Between Pad F1-2(4.3mm,20mm) on Bottom Layer And Text "C11" (5.7mm,20.8mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
+Rule Violations :4
 
 Processing Rule : Silk to Silk (Clearance=0.07mm) (All),(All)
 Rule Violations :0
@@ -51,6 +53,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 8
+Violations Detected : 10
 Waived Violations : 0
 Time Elapsed        : 00:00:02
