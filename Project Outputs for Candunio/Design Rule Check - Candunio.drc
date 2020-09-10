@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\maanj\Documents\GitHub\CanDuino\Candunio.PcbDoc
-Date     : 2020-09-07
-Time     : 1:14:39 PM
+Date     : 2020-09-09
+Time     : 6:01:53 PM
 
 Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
 Rule Violations :0
@@ -27,10 +27,10 @@ Rule Violations :0
 Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
 Rule Violations :0
 
-Processing Rule : Minimum Solder Mask Sliver (Gap=0.24mm) (All),(All)
-   Violation between Minimum Solder Mask Sliver Constraint: (0.2mm < 0.24mm) Between Pad P3-1(11.54mm,6mm) on Multi-Layer And Pad R1-1(10.5mm,8mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.2mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.2mm < 0.24mm) Between Pad R6-1(19mm,23mm) on Top Layer And Pad Y2-2(19.7mm,20.9mm) on Top Layer [Top Solder] Mask Sliver [0.2mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.2mm < 0.24mm) Between Pad R6-1(19mm,23mm) on Top Layer And Pad Y2-3(18.5mm,20.9mm) on Top Layer [Top Solder] Mask Sliver [0.2mm]
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.25mm) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (0.25mm < 0.25mm) Between Pad J1-1(35.3mm,17.447mm) on Top Layer And Pad J1-2(35.3mm,18.097mm) on Top Layer [Top Solder] Mask Sliver [0.25mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.25mm < 0.25mm) Between Pad J1-2(35.3mm,18.097mm) on Top Layer And Pad J1-3(35.3mm,18.747mm) on Top Layer [Top Solder] Mask Sliver [0.25mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.25mm < 0.25mm) Between Pad J1-4(35.3mm,19.397mm) on Top Layer And Pad J1-5(35.3mm,20.047mm) on Top Layer [Top Solder] Mask Sliver [0.25mm]
 Rule Violations :3
 
 Processing Rule : Silk To Solder Mask (Clearance=0.07mm) (IsPad),(All)
@@ -50,4 +50,4 @@ Rule Violations :0
 
 Violations Detected : 5
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01
