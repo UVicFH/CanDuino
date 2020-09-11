@@ -1,9 +1,9 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\leahc\Documents\GitHub\CanDuino\Candunio.PcbDoc
 Date     : 2020-09-10
-Time     : 10:22:51 PM
+Time     : 10:47:16 PM
 
-Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
+Processing Rule : Clearance Constraint (Gap=0.153mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
@@ -51,4 +51,4 @@ Rule Violations :0
 
 Violations Detected : 6
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02

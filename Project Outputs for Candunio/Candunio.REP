@@ -2,126 +2,6 @@
 FileName = Candunio.GBR
 AutoAperture = True
 *************************************************************
-Generating : Keep-Out Layer
-      File : Candunio.GKO
-
-    Adding Layer      : Keep-Out Layer
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 20
-      File : Candunio.GM20
-
-    Adding Layer      : Mechanical 20
-
-
-Used DCodes :
-    D71
-*************************************************************
-
-*************************************************************
-Generating : Bottom Pad Master
-      File : Candunio.GPB
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D35
-    D36
-    D40
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : Candunio.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-    D10
-    D13
-*************************************************************
-
-*************************************************************
-Generating : Top Pad Master
-      File : Candunio.GPT
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : Candunio.GTO
-
-    Adding Layer      : Top Overlay
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D14
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 1
-      File : Candunio.GM1
-
-    Adding Layer      : Mechanical 1
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
 Generating : Top Paste
       File : Candunio.GTP
 
@@ -149,13 +29,111 @@ Used DCodes :
     D28
     D29
     D30
+    D31
+    D32
 *************************************************************
 
 *************************************************************
-Generating : Bottom Paste
-      File : Candunio.GBP
+Generating : Mechanical 20
+      File : Candunio.GM20
 
-    Adding Layer      : Bottom Paste
+    Adding Layer      : Mechanical 20
+
+
+Used DCodes :
+    D71
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 16
+      File : Candunio.GM16
+
+    Adding Layer      : Mechanical 16
+
+
+Used DCodes :
+    D71
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : Candunio.GPT
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : Candunio.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Candunio.GBL
 
     Adding Layer      : Bottom Layer
 
@@ -163,16 +141,61 @@ Generating : Bottom Paste
 
 
 Used DCodes :
-    D19
-    D20
-    D24
+    D12
+    D35
+    D36
+    D38
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
     D63
     D64
-    D65
-    D66
-    D67
-    D68
-    D69
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 3
+      File : Candunio.GM3
+
+    Adding Layer      : Mechanical 3
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : Candunio.GPB
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D35
+    D36
+    D38
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D60
+    D61
+    D62
+    D63
+    D64
 *************************************************************
 
 *************************************************************
@@ -189,20 +212,65 @@ Generating : Bottom Solder
 Used DCodes :
     D35
     D36
-    D40
-    D47
-    D48
-    D49
-    D50
+    D38
     D51
     D52
+    D53
+    D54
+    D55
     D56
-    D57
-    D58
-    D59
     D60
     D61
     D62
+    D63
+    D64
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Candunio.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Candunio.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D20
+    D65
+    D66
+    D67
+    D68
+    D69
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : Candunio.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
 *************************************************************
 
 *************************************************************
@@ -217,8 +285,6 @@ Generating : Top Solder
 
 
 Used DCodes :
-    D31
-    D32
     D33
     D34
     D35
@@ -239,6 +305,20 @@ Used DCodes :
     D50
     D51
     D52
+    D53
+    D54
+    D55
+    D56
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : Candunio.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
 *************************************************************
 
 *************************************************************
@@ -253,84 +333,15 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Layer
-      File : Candunio.GBL
+Generating : Bottom Overlay
+      File : Candunio.GBO
 
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D12
-    D35
-    D36
-    D40
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 3
-      File : Candunio.GM3
-
-    Adding Layer      : Mechanical 3
+    Adding Layer      : Bottom Overlay
 
 
 Used DCodes :
     D10
-*************************************************************
-
-*************************************************************
-Generating : Top Layer
-      File : Candunio.GTL
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D12
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
+    D13
 *************************************************************
 
 *************************************************************

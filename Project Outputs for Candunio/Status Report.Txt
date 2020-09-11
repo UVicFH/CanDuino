@@ -1,13 +1,29 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : Project [Candunio.PrjPcb]
-   Generated File[Candunio.TXT]
-   Generated File[Candunio-BoardEdgeRout.TXT]
-   Generated File[Candunio.LDP]
-   Generated File[Candunio.DRR]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [Candunio.PrjPcb]
+   Generated File[Candunio.GTO]
+   Generated File[Candunio.GTP]
+   Generated File[Candunio.GTS]
+   Generated File[Candunio.GTL]
+   Generated File[Candunio.GBL]
+   Generated File[Candunio.GBS]
+   Generated File[Candunio.GBP]
+   Generated File[Candunio.GBO]
+   Generated File[Candunio.GM1]
+   Generated File[Candunio.GM3]
+   Generated File[Candunio.GM13]
+   Generated File[Candunio.GM15]
+   Generated File[Candunio.GM16]
+   Generated File[Candunio.GM20]
+   Generated File[Candunio.GKO]
+   Generated File[Candunio.GPT]
+   Generated File[Candunio.GPB]
+   Generated File[Candunio.RUL]
+   Generated File[Candunio.EXTREP]
+   Generated File[Candunio.REP]
 
 
-Files Generated   : 4
+Files Generated   : 20
 Documents Printed : 0
 
-Finished Output Generation At 6:09:11 PM On 2020-09-09
+Finished Output Generation At 10:52:38 PM On 2020-09-10
