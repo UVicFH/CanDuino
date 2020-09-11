@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\leahc\Documents\GitHub\CanDuino\Candunio.PcbDoc
 Date     : 2020-09-10
-Time     : 10:47:16 PM
+Time     : 11:37:37 PM
 
 Processing Rule : Clearance Constraint (Gap=0.153mm) (All),(All)
 Rule Violations :0
@@ -36,8 +36,7 @@ Rule Violations :3
 Processing Rule : Silk To Solder Mask (Clearance=0.07mm) (IsPad),(All)
    Violation between Silk To Solder Mask Clearance Constraint: (0.065mm < 0.07mm) Between Pad C8-1(22.72mm,17.5mm) on Top Layer And Track (23.4mm,16.75mm)(23.4mm,21.35mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.065mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.065mm < 0.07mm) Between Pad C8-1(22.72mm,17.5mm) on Top Layer And Track (23.4mm,16.75mm)(33.6mm,16.75mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.065mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.034mm < 0.07mm) Between Pad J1-0(35.3mm,17.4mm) on Multi-Layer And Text "R12" (35.3mm,17.4mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.034mm]
-Rule Violations :3
+Rule Violations :2
 
 Processing Rule : Silk to Silk (Clearance=0.07mm) (All),(All)
 Rule Violations :0
@@ -49,6 +48,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 6
+Violations Detected : 5
 Waived Violations : 0
 Time Elapsed        : 00:00:02
